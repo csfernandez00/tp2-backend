@@ -1,0 +1,4 @@
+PORT=3000
+MESSAGE="Running at port ->"
+JWT_SECRET=""
+MONGO_DB=""
