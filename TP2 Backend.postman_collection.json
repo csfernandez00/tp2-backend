@@ -1,0 +1,386 @@
+{
+	"info": {
+		"_postman_id": "08e88a59-92de-4ffc-aa17-8fe5f1aee66d",
+		"name": "TP2 Backend",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23972265"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"csfernandez00@gmail.com\",\r\n    \"password\": \"1234\" \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"csfernandez00@gmail.com\",\r\n    \"password\": \"1234\" \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AddFav",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\": \"638661786b8163627d84ea2c\",\r\n    \"animeId\": \"63881153c2b330f54c988fc2\" \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Animes",
+			"item": [
+				{
+					"name": "Get Animes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/animes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"animes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Anime Detail",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/animes?id=638671fcc18eed3438d292f2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"animes"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "638671fcc18eed3438d292f2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Anime",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"title\": \"Cars 6\",\r\n\t\"description\": \"Cars movie for family\" ,\r\n\t\"imageUrl\": \"https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/E8AE6930B0A452C2FB77C15CFC0F5C0AE3C0FED690FED059698C650B11EA6BFF/scale?width=1200&aspectRatio=1.78&format=jpeg\",\r\n\t\"category\": \"Family\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/animes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"animes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Anime",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/animes/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"animes",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "63881138c2b330f54c988fbc"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Anime",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"title\": \"Cars 3\",\r\n\t\"description\": \"Movie for family\" ,\r\n\t\"imageUrl\": \"https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/E8AE6930B0A452C2FB77C15CFC0F5C0AE3C0FED690FED059698C650B11EA6BFF/scale?width=1200&aspectRatio=1.78&format=jpeg\",\r\n\t\"category\": \"Family, Kids\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/animes/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"animes",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "63881153c2b330f54c988fc2"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Chapters",
+			"item": [
+				{
+					"name": "Get Chapters",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/chapters?id=638671fcc18eed3438d292f2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"chapters"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "638671fcc18eed3438d292f2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Chapter",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"title\": \"Capitulo 3\",\r\n\t\"description\": \"Capitulo de la saga\",\r\n\t\"chapterUrl\": \"https://netflix.com/cars/capitulo3\",\r\n    \"animeOwner\": \"638671fcc18eed3438d292f2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/chapters",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"chapters"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Chapter",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"title\": \"Capitulo 4\",\r\n\t\"description\": \"Cuarto Capitulo de la saga\",\r\n\t\"chapterUrl\": \"https://netflix.com/cars/capitulo4\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/chapters/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"chapters",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "6387f562f2a3c1b4914cb302"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Chapter",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/chapters/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"chapters",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "6388b8bc6d6d38a35a573b37"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
